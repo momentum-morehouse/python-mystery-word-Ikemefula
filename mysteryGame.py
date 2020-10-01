@@ -17,6 +17,7 @@ say_hello(computer_guess())
 def guess():
     guess = input("Enter Guess Here")
     return guess 
+
 # confirm correct or incorrect answer
 def validate(guess, word):
     if guess in word:
