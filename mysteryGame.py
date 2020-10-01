@@ -1,5 +1,9 @@
 # computer ask user to guess 
+# importing a random 'method' module#
 import random 
+
+# r = read only. 
+# a - 
 file_object = open('words.txt', 'r')
 words_list = file_object.readlines()
 # print("random item from list is:", random.choice(words_list))
@@ -13,19 +17,26 @@ def say_hello(word):
         print("Hello", word)
     else:
         print("Not Valid")
-say_hello(computer_guess())
+
+
 def guess():
-    guess = input("Enter Guess Here")
-    return guess 
+    user_guess = input("Enter Letter Here ")
+    return user_guess
 
 # confirm correct or incorrect answer
+# none needs to be capitalized in python
 def validate(guess, word):
     if guess in word:
         print("yes")
+    else:
+        print("no")
 
-computer_guess()
+new_word = computer_guess()
+user_guess = guess()
+say_hello(new_word)
 
-
+validate(user_guess, new_word)
+# LOOK UP KEYWORD AND POSITIONAL ARGUMENTS 
 # LOOK UP "HOW TO READ A TEXT FILE"
 
 
